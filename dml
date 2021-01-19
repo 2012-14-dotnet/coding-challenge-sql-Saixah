@@ -41,3 +41,10 @@ WHERE Employee.DeptID =
 	Where Name = 'Marketing')
 GROUP BY Salary;
 
+SELECT COUNT(ID)
+FROM Employee
+WHERE DeptID = 
+	(Select ID 
+	From Department 
+	Where Name = 'Marketing')
+GROUP BY ID;
